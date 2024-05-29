@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаСохранить" id="26">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Сохранить</CommandName>
+				<ExtendedTooltip name="ФормаСохранитьРасширеннаяПодсказка" id="27"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="ОчередиЗаданий" id="1">
+			<Representation>List</Representation>
+			<DataPath>ОчередиЗаданий</DataPath>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ОчередиЗаданийКонтекстноеМеню" id="3">
+				<Autofill>false</Autofill>
+				<ChildItems>
+					<Button name="ОчередиЗаданийКонтекстноеМенюПоказатьПерестановкуСтрок" id="31">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ОчередиЗаданий.StandardCommand.ShowRowRearrangement</CommandName>
+						<ExtendedTooltip name="ОчередиЗаданийКонтекстноеМенюПоказатьПерестановкуСтрокРасширеннаяПодсказка" id="32"/>
+					</Button>
+					<Button name="ОчередиЗаданийКонтекстноеМенюПереместитьВверх" id="33">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ОчередиЗаданий.StandardCommand.MoveUp</CommandName>
+						<ExtendedTooltip name="ОчередиЗаданийКонтекстноеМенюПереместитьВверхРасширеннаяПодсказка" id="34"/>
+					</Button>
+					<Button name="ОчередиЗаданийКонтекстноеМенюПереместитьВниз" id="35">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ОчередиЗаданий.StandardCommand.MoveDown</CommandName>
+						<ExtendedTooltip name="ОчередиЗаданийКонтекстноеМенюПереместитьВнизРасширеннаяПодсказка" id="36"/>
+					</Button>
+					<Button name="ОчередиЗаданийКонтекстноеМенюСортироватьСписокПоВозрастанию" id="37">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ОчередиЗаданий.StandardCommand.SortListAsc</CommandName>
+						<ExtendedTooltip name="ОчередиЗаданийКонтекстноеМенюСортироватьСписокПоВозрастаниюРасширеннаяПодсказка" id="38"/>
+					</Button>
+					<Button name="ОчередиЗаданийКонтекстноеМенюСортироватьСписокПоУбыванию" id="39">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ОчередиЗаданий.StandardCommand.SortListDesc</CommandName>
+						<ExtendedTooltip name="ОчередиЗаданийКонтекстноеМенюСортироватьСписокПоУбываниюРасширеннаяПодсказка" id="40"/>
+					</Button>
+					<Button name="ОчередиЗаданийКонтекстноеМенюВывестиСписок" id="41">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ОчередиЗаданий.StandardCommand.OutputList</CommandName>
+						<ExtendedTooltip name="ОчередиЗаданийКонтекстноеМенюВывестиСписокРасширеннаяПодсказка" id="42"/>
+					</Button>
+					<Button name="ОчередиЗаданийКонтекстноеМенюКопироватьВБуферОбмена" id="43">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ОчередиЗаданий.StandardCommand.CopyToClipboard</CommandName>
+						<ExtendedTooltip name="ОчередиЗаданийКонтекстноеМенюКопироватьВБуферОбменаРасширеннаяПодсказка" id="44"/>
+					</Button>
+					<Button name="ОчередиЗаданийКонтекстноеМенюВыделитьВсе" id="45">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ОчередиЗаданий.StandardCommand.SelectAll</CommandName>
+						<ExtendedTooltip name="ОчередиЗаданийКонтекстноеМенюВыделитьВсеРасширеннаяПодсказка" id="46"/>
+					</Button>
+					<Button name="ОчередиЗаданийКонтекстноеМенюПоказатьМножественноеВыделение" id="47">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ОчередиЗаданий.StandardCommand.ShowMultipleSelection</CommandName>
+						<ExtendedTooltip name="ОчередиЗаданийКонтекстноеМенюПоказатьМножественноеВыделениеРасширеннаяПодсказка" id="48"/>
+					</Button>
+					<Button name="ОчередиЗаданийКонтекстноеМенюSearchEverywhere" id="49">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ОчередиЗаданий.StandardCommand.SearchEverywhere</CommandName>
+						<ExtendedTooltip name="ОчередиЗаданийКонтекстноеМенюSearchEverywhereРасширеннаяПодсказка" id="50"/>
+					</Button>
+					<Button name="ОчередиЗаданийКонтекстноеМенюНайти" id="51">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ОчередиЗаданий.StandardCommand.Find</CommandName>
+						<ExtendedTooltip name="ОчередиЗаданийКонтекстноеМенюНайтиРасширеннаяПодсказка" id="52"/>
+					</Button>
+					<Button name="ОчередиЗаданийКонтекстноеМенюОтменитьПоиск" id="53">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ОчередиЗаданий.StandardCommand.CancelSearch</CommandName>
+						<ExtendedTooltip name="ОчередиЗаданийКонтекстноеМенюОтменитьПоискРасширеннаяПодсказка" id="54"/>
+					</Button>
+					<Button name="ОчередиЗаданийКонтекстноеМенюПоискПоТекущемуЗначению" id="55">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Item.ОчередиЗаданий.StandardCommand.FindByCurrentValue</CommandName>
+						<ExtendedTooltip name="ОчередиЗаданийКонтекстноеМенюПоискПоТекущемуЗначениюРасширеннаяПодсказка" id="56"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="ОчередиЗаданийКоманднаяПанель" id="2">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ОчередиЗаданийРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="ОчередиЗаданийСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>ОчередиЗаданий</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОчередиЗаданийСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="ОчередиЗаданийСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ОчередиЗаданийСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>ОчередиЗаданий</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ОчередиЗаданийСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ОчередиЗаданийСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ОчередиЗаданийУправлениеПоиском" id="8">
+				<AdditionSource>
+					<Item>ОчередиЗаданий</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ОчередиЗаданийУправлениеПоискомКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ОчередиЗаданийУправлениеПоискомРасширеннаяПодсказка" id="10"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ОчередиЗаданийВыбор</Event>
+				<Event name="BeforeAddRow">ОчередиЗаданийПередНачаломДобавления</Event>
+				<Event name="BeforeDeleteRow">ОчередиЗаданийПередУдалением</Event>
+				<Event name="BeforeRowChange">ОчередиЗаданийПередНачаломИзменения</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ОчередиЗаданийПредставлениеОчереди" id="28">
+					<DataPath>ОчередиЗаданий.ПредставлениеОчереди</DataPath>
+					<ContextMenu name="ОчередиЗаданийПредставлениеОчередиКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ОчередиЗаданийПредставлениеОчередиРасширеннаяПодсказка" id="30"/>
+				</InputField>
+				<InputField name="ОчередиЗаданийПриоритет" id="17">
+					<DataPath>ОчередиЗаданий.Приоритет</DataPath>
+					<ContextMenu name="ОчередиЗаданийПриоритетКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ОчередиЗаданийПриоритетРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="ОчередиЗаданийОчередь" id="14">
+					<DataPath>ОчередиЗаданий.Очередь</DataPath>
+					<Visible>false</Visible>
+					<ContextMenu name="ОчередиЗаданийОчередьКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ОчередиЗаданийОчередьРасширеннаяПодсказка" id="16"/>
+				</InputField>
+				<InputField name="ОчередиЗаданийМетод" id="20">
+					<DataPath>ОчередиЗаданий.Метод</DataPath>
+					<ContextMenu name="ОчередиЗаданийМетодКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ОчередиЗаданийМетодРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<CheckBoxField name="ОчередиЗаданийАктивность" id="23">
+					<DataPath>ОчередиЗаданий.Активность</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОчередиЗаданийАктивностьКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ОчередиЗаданийАктивностьРасширеннаяПодсказка" id="25"/>
+				</CheckBoxField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ОчередиЗаданий" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очереди заданий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Очередь" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя очереди</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Приоритет" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приоритет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>7</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Метод" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Метод</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>1000</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Активность" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Активность</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеОчереди" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Очередь</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>1000</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Сохранить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Сохранить</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

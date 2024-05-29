@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.16">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаГотово" id="19">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Готово</CommandName>
+				<ExtendedTooltip name="ФормаГотовоРасширеннаяПодсказка" id="20"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="FillCheckProcessingAtServer">ОбработкаПроверкиЗаполненияНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ПартияНомерПартии" id="1">
+			<DataPath>Партия.НомерПартии</DataPath>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<ContextMenu name="ПартияНомерПартииКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПартияНомерПартииРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ПартияТорговоеНаименование" id="7">
+			<DataPath>Партия.ТорговоеНаименование</DataPath>
+			<ContextMenu name="ПартияТорговоеНаименованиеКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ПартияТорговоеНаименованиеРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ПартияАртикулПроизводителя" id="10">
+			<DataPath>Партия.АртикулПроизводителя</DataPath>
+			<ContextMenu name="ПартияАртикулПроизводителяКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ПартияАртикулПроизводителяРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ПартияДатаПроизводства" id="13">
+			<DataPath>Партия.ДатаПроизводства</DataPath>
+			<ContextMenu name="ПартияДатаПроизводстваКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ПартияДатаПроизводстваРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="ПартияСрокГодности" id="16">
+			<DataPath>Партия.СрокГодности</DataPath>
+			<ContextMenu name="ПартияСрокГодностиКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ПартияСрокГодностиРасширеннаяПодсказка" id="18"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Партия" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Партия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogObject.ПартииСАТУРН</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Готово" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Готово</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Готово</Action>
+		</Command>
+	</Commands>
+</Form>
